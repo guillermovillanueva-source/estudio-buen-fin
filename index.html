@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Tickets Buen Fin 2024 vs 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: informe de una columna, resumen arriba, evidencia en medio, plan de acción al final */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#18202b; --muted:#5b6574; --line:#dde1e7;
+  --c24:#8a96a8; --c25:#2448c9; --band:#fff1cf; --bandink:#8a5a00;
+  --hot:#b42318; --hotbg:#fde8e6; --warm:#9a5b00; --warmbg:#fdf0d9; --cool:#3d6b4f; --coolbg:#e4f1e8;
+  --display:"Archivo",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#11151b; --surface:#181e26; --ink:#e7ebf1; --muted:#9aa4b3; --line:#2a323d;
+  --c24:#7d8899; --c25:#7f9bff; --band:#3a2f12; --bandink:#f2c463;
+  --hot:#ff8a7e; --hotbg:#3d1d1a; --warm:#f2b35a; --warmbg:#3a2a12; --cool:#8fd0a5; --coolbg:#18301f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11151b; --surface:#181e26; --ink:#e7ebf1; --muted:#9aa4b3; --line:#2a323d;
+  --c24:#7d8899; --c25:#7f9bff; --band:#3a2f12; --bandink:#f2c463;
+  --hot:#ff8a7e; --hotbg:#3d1d1a; --warm:#f2b35a; --warmbg:#3a2a12; --cool:#8fd0a5; --coolbg:#18301f; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body)}
+.wrap{max-width:960px;margin:0 auto;padding-inline:20px;padding-block:40px 64px;display:grid;gap:44px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(28px,4.4vw,42px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:22px;font-weight:700}
+h3{font-size:16px;font-weight:700}
+p{margin:0;max-width:68ch}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:grid;gap:12px}
+.lede{color:var(--muted);font-size:16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font:13px var(--mono);color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kpi{background:var(--surface);padding:16px 18px;display:grid;gap:4px;min-width:0}
+.kpi .v{font:700 26px var(--display);font-variant-numeric:tabular-nums}
+.kpi .v small{font:500 13px var(--mono);color:var(--muted)}
+.kpi .l{font-size:13px;color:var(--muted)}
+section{display:grid;gap:14px}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;min-width:0}
+.scroll{overflow-x:auto}
+.scroll svg{min-width:640px;width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.k24{background:var(--c24)} .k25{background:var(--c25)} .kband{background:var(--band);border:1px solid var(--bandink)}
+svg text{font-family:var(--mono)}
+.grid{stroke:var(--line);stroke-width:1}
+.tick{fill:var(--muted);font-size:11px}
+.evband{fill:var(--band)} .evlab{fill:var(--bandink);font-size:11px;font-weight:500}
+.line{fill:none;stroke-width:2.2;stroke-linejoin:round}
+.s24{stroke:var(--c24)} .s25{stroke:var(--c25)}
+.dot.s24{fill:var(--c24);stroke:none} .dot.s25{fill:var(--c25);stroke:none}
+.hl{fill:none;stroke:var(--hot);stroke-width:2}
+.ann{fill:var(--hot);font-size:12px;font-weight:500}
+.bn{fill:var(--c24)} .bb{fill:var(--c25)}
+.note{font-size:13px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:680px}
+th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+thead th{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tbody th{font-weight:500}
+td.num{text-align:right}
+.yr{border-left:1px solid var(--line)}
+.barcell{width:150px}
+.mb{display:block;height:7px;border-radius:2px;margin-block:2px}
+.mb.b25{background:var(--c25)} .mb.bn,.mb.s24b{background:var(--c24)}
+.pill{display:inline-block;font:500 12px var(--mono);padding:2px 8px;border-radius:99px}
+.pill.hot{background:var(--hotbg);color:var(--hot)} .pill.warm{background:var(--warmbg);color:var(--warm)} .pill.cool{background:var(--coolbg);color:var(--cool)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.yoy{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.yoy li{display:grid;grid-template-columns:minmax(0,1fr) 90px 74px;gap:10px;align-items:center;font-size:13.5px}
+.yoy .sc{min-width:0}
+.yoy .num{text-align:right;font-size:12.5px;color:var(--muted)}
+.findings{display:grid;gap:0;border-top:1px solid var(--line)}
+.f{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 22px;padding-block:18px;border-bottom:1px solid var(--line)}
+.f .tag{font:500 12px var(--mono);color:var(--muted);display:grid;gap:6px;align-content:start}
+.f .body{display:grid;gap:6px;min-width:0}
+.sev{justify-self:start}
+.plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.step .when{font:500 12px var(--mono);color:var(--c25);letter-spacing:.04em;text-transform:uppercase}
+.step ul{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px}
+.dq{font-size:14px;margin:0;padding-left:18px;display:grid;gap:6px;color:var(--muted)}
+.dq b{color:var(--ink);font-weight:600}
+@media (max-width:560px){.f{grid-template-columns:1fr}.f .tag{grid-auto-flow:column;justify-content:start;align-items:center}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Mesa de ayuda · Estudio de comportamiento</span>
+  <h1>Tickets del Buen Fin: 2024 vs 2025</h1>
+  <p class="lede">Qué pasa con los tickets de soporte antes, durante y después del Buen Fin, qué cambió de un año a otro y qué debemos cuidar en la próxima edición.</p>
+  <div class="meta"><span>2024: 3–30 nov · 1,587 tickets · evento 15–18 nov</span><span>2025: 2–29 nov · 1,616 tickets · evento 14–17 nov</span><span>Fuente: pestañas «Buen Fin 2024» y «Buen Fin 2025»</span></div>
+</header>
+
+<div class="kpis">
+  <div class="kpi"><span class="l">Tickets durante los 4 días del evento</span><span class="v">326 → 374 <small>+15%</small></span></div>
+  <div class="kpi"><span class="l">Tickets por día en el evento vs. 1ª semana del mes</span><span class="v">1.8× → 2.3×</span></div>
+  <div class="kpi"><span class="l">Día más cargado</span><span class="v">97 → 184 <small>16 nov → 13 nov</small></span></div>
+  <div class="kpi"><span class="l">Tickets del evento que son incidentes</span><span class="v">66% → 60%</span></div>
+</div>
+
+<section>
+  <h2>El pico se movió al día anterior al evento</h2>
+  <p>En 2024 la carga subió el primer y segundo día del Buen Fin. En 2025 el día más pesado fue el <b>jueves 13 de noviembre, un día antes de arrancar</b>, con 184 tickets: el doble del primer día del evento y más de tres veces un día normal. Después el sábado 15 volvió a subir (131).</p>
+  <div class="fig">
+    <div class="legend"><span><i class="k24"></i>2024</span><span><i class="k25"></i>2025</span><span><i class="kband"></i>Días del Buen Fin</span></div>
+    <div class="scroll"><svg viewBox="0 0 860 300" role="img" aria-label="Tickets por día alineados al inicio del Buen Fin"><rect class="evband" x="384.7" y="24" width="118.5" height="236"/><text class="evlab" x="444.0" y="16" text-anchor="middle">Buen Fin (4 días)</text><line class="grid" x1="44" x2="844" y1="260.0" y2="260.0"/><text class="tick" x="36" y="264.0" text-anchor="end">0</text><line class="grid" x1="44" x2="844" y1="201.0" y2="201.0"/><text class="tick" x="36" y="205.0" text-anchor="end">50</text><line class="grid" x1="44" x2="844" y1="142.0" y2="142.0"/><text class="tick" x="36" y="146.0" text-anchor="end">100</text><line class="grid" x1="44" x2="844" y1="83.0" y2="83.0"/><text class="tick" x="36" y="87.0" text-anchor="end">150</text><line class="grid" x1="44" x2="844" y1="24.0" y2="24.0"/><text class="tick" x="36" y="28.0" text-anchor="end">200</text><text class="tick" x="44.0" y="278" text-anchor="middle">-12</text><text class="tick" x="132.9" y="278" text-anchor="middle">-9</text><text class="tick" x="221.8" y="278" text-anchor="middle">-6</text><text class="tick" x="310.7" y="278" text-anchor="middle">-3</text><text class="tick" x="399.6" y="278" text-anchor="middle">0</text><text class="tick" x="488.4" y="278" text-anchor="middle">+3</text><text class="tick" x="577.3" y="278" text-anchor="middle">+6</text><text class="tick" x="666.2" y="278" text-anchor="middle">+9</text><text class="tick" x="755.1" y="278" text-anchor="middle">+12</text><text class="tick" x="844.0" y="278" text-anchor="middle">+15</text><text class="tick" x="444.0" y="296" text-anchor="middle">Días respecto al primer día del Buen Fin</text><polyline class="line s24" points="44.0,214.0 73.6,196.3 103.3,212.8 132.9,199.8 162.5,203.4 192.1,165.6 221.8,165.6 251.4,190.4 281.0,177.4 310.7,195.1 340.3,199.8 369.9,193.9 399.6,151.4 429.2,145.5 458.8,168.0 488.4,190.4 518.1,182.1 547.7,215.2 577.3,192.7 607.0,196.3 636.6,214.0 666.2,202.2 695.9,199.8 725.5,224.6 755.1,202.2 784.7,205.7 814.4,186.8 844.0,216.3"/><circle class="dot s24" cx="44.0" cy="214.0" r="3"><title>2024 · 2024-11-03 · 39 tickets</title></circle><circle class="dot s24" cx="73.6" cy="196.3" r="3"><title>2024 · 2024-11-04 · 54 tickets</title></circle><circle class="dot s24" cx="103.3" cy="212.8" r="3"><title>2024 · 2024-11-05 · 40 tickets</title></circle><circle class="dot s24" cx="132.9" cy="199.8" r="3"><title>2024 · 2024-11-06 · 51 tickets</title></circle><circle class="dot s24" cx="162.5" cy="203.4" r="3"><title>2024 · 2024-11-07 · 48 tickets</title></circle><circle class="dot s24" cx="192.1" cy="165.6" r="3"><title>2024 · 2024-11-08 · 80 tickets</title></circle><circle class="dot s24" cx="221.8" cy="165.6" r="3"><title>2024 · 2024-11-09 · 80 tickets</title></circle><circle class="dot s24" cx="251.4" cy="190.4" r="3"><title>2024 · 2024-11-10 · 59 tickets</title></circle><circle class="dot s24" cx="281.0" cy="177.4" r="3"><title>2024 · 2024-11-11 · 70 tickets</title></circle><circle class="dot s24" cx="310.7" cy="195.1" r="3"><title>2024 · 2024-11-12 · 55 tickets</title></circle><circle class="dot s24" cx="340.3" cy="199.8" r="3"><title>2024 · 2024-11-13 · 51 tickets</title></circle><circle class="dot s24" cx="369.9" cy="193.9" r="3"><title>2024 · 2024-11-14 · 56 tickets</title></circle><circle class="dot s24" cx="399.6" cy="151.4" r="3"><title>2024 · 2024-11-15 · 92 tickets</title></circle><circle class="dot s24" cx="429.2" cy="145.5" r="3"><title>2024 · 2024-11-16 · 97 tickets</title></circle><circle class="dot s24" cx="458.8" cy="168.0" r="3"><title>2024 · 2024-11-17 · 78 tickets</title></circle><circle class="dot s24" cx="488.4" cy="190.4" r="3"><title>2024 · 2024-11-18 · 59 tickets</title></circle><circle class="dot s24" cx="518.1" cy="182.1" r="3"><title>2024 · 2024-11-19 · 66 tickets</title></circle><circle class="dot s24" cx="547.7" cy="215.2" r="3"><title>2024 · 2024-11-20 · 38 tickets</title></circle><circle class="dot s24" cx="577.3" cy="192.7" r="3"><title>2024 · 2024-11-21 · 57 tickets</title></circle><circle class="dot s24" cx="607.0" cy="196.3" r="3"><title>2024 · 2024-11-22 · 54 tickets</title></circle><circle class="dot s24" cx="636.6" cy="214.0" r="3"><title>2024 · 2024-11-23 · 39 tickets</title></circle><circle class="dot s24" cx="666.2" cy="202.2" r="3"><title>2024 · 2024-11-24 · 49 tickets</title></circle><circle class="dot s24" cx="695.9" cy="199.8" r="3"><title>2024 · 2024-11-25 · 51 tickets</title></circle><circle class="dot s24" cx="725.5" cy="224.6" r="3"><title>2024 · 2024-11-26 · 30 tickets</title></circle><circle class="dot s24" cx="755.1" cy="202.2" r="3"><title>2024 · 2024-11-27 · 49 tickets</title></circle><circle class="dot s24" cx="784.7" cy="205.7" r="3"><title>2024 · 2024-11-28 · 46 tickets</title></circle><circle class="dot s24" cx="814.4" cy="186.8" r="3"><title>2024 · 2024-11-29 · 62 tickets</title></circle><circle class="dot s24" cx="844.0" cy="216.3" r="3"><title>2024 · 2024-11-30 · 37 tickets</title></circle><polyline class="line s25" points="44.0,256.5 73.6,184.5 103.3,206.9 132.9,201.0 162.5,212.8 192.1,189.2 221.8,188.0 251.4,198.6 281.0,193.9 310.7,210.4 340.3,190.4 369.9,42.9 399.6,150.3 429.2,105.4 458.8,171.5 488.4,171.5 518.1,203.4 547.7,211.6 577.3,206.9 607.0,205.7 636.6,195.1 666.2,203.4 695.9,219.9 725.5,211.6 755.1,198.6 784.7,217.5 814.4,221.1 844.0,204.5"/><circle class="dot s25" cx="44.0" cy="256.5" r="3"><title>2025 · 2025-11-02 · 3 tickets</title></circle><circle class="dot s25" cx="73.6" cy="184.5" r="3"><title>2025 · 2025-11-03 · 64 tickets</title></circle><circle class="dot s25" cx="103.3" cy="206.9" r="3"><title>2025 · 2025-11-04 · 45 tickets</title></circle><circle class="dot s25" cx="132.9" cy="201.0" r="3"><title>2025 · 2025-11-05 · 50 tickets</title></circle><circle class="dot s25" cx="162.5" cy="212.8" r="3"><title>2025 · 2025-11-06 · 40 tickets</title></circle><circle class="dot s25" cx="192.1" cy="189.2" r="3"><title>2025 · 2025-11-07 · 60 tickets</title></circle><circle class="dot s25" cx="221.8" cy="188.0" r="3"><title>2025 · 2025-11-08 · 61 tickets</title></circle><circle class="dot s25" cx="251.4" cy="198.6" r="3"><title>2025 · 2025-11-09 · 52 tickets</title></circle><circle class="dot s25" cx="281.0" cy="193.9" r="3"><title>2025 · 2025-11-10 · 56 tickets</title></circle><circle class="dot s25" cx="310.7" cy="210.4" r="3"><title>2025 · 2025-11-11 · 42 tickets</title></circle><circle class="dot s25" cx="340.3" cy="190.4" r="3"><title>2025 · 2025-11-12 · 59 tickets</title></circle><circle class="dot s25" cx="369.9" cy="42.9" r="3"><title>2025 · 2025-11-13 · 184 tickets</title></circle><circle class="dot s25" cx="399.6" cy="150.3" r="3"><title>2025 · 2025-11-14 · 93 tickets</title></circle><circle class="dot s25" cx="429.2" cy="105.4" r="3"><title>2025 · 2025-11-15 · 131 tickets</title></circle><circle class="dot s25" cx="458.8" cy="171.5" r="3"><title>2025 · 2025-11-16 · 75 tickets</title></circle><circle class="dot s25" cx="488.4" cy="171.5" r="3"><title>2025 · 2025-11-17 · 75 tickets</title></circle><circle class="dot s25" cx="518.1" cy="203.4" r="3"><title>2025 · 2025-11-18 · 48 tickets</title></circle><circle class="dot s25" cx="547.7" cy="211.6" r="3"><title>2025 · 2025-11-19 · 41 tickets</title></circle><circle class="dot s25" cx="577.3" cy="206.9" r="3"><title>2025 · 2025-11-20 · 45 tickets</title></circle><circle class="dot s25" cx="607.0" cy="205.7" r="3"><title>2025 · 2025-11-21 · 46 tickets</title></circle><circle class="dot s25" cx="636.6" cy="195.1" r="3"><title>2025 · 2025-11-22 · 55 tickets</title></circle><circle class="dot s25" cx="666.2" cy="203.4" r="3"><title>2025 · 2025-11-23 · 48 tickets</title></circle><circle class="dot s25" cx="695.9" cy="219.9" r="3"><title>2025 · 2025-11-24 · 34 tickets</title></circle><circle class="dot s25" cx="725.5" cy="211.6" r="3"><title>2025 · 2025-11-25 · 41 tickets</title></circle><circle class="dot s25" cx="755.1" cy="198.6" r="3"><title>2025 · 2025-11-26 · 52 tickets</title></circle><circle class="dot s25" cx="784.7" cy="217.5" r="3"><title>2025 · 2025-11-27 · 36 tickets</title></circle><circle class="dot s25" cx="814.4" cy="221.1" r="3"><title>2025 · 2025-11-28 · 33 tickets</title></circle><circle class="dot s25" cx="844.0" cy="204.5" r="3"><title>2025 · 2025-11-29 · 47 tickets</title></circle><circle class="hl" cx="369.9" cy="42.9" r="7"/><text class="ann" x="357.9" y="46.9" text-anchor="end">13 nov 2025 · 184</text></svg></div>
+    <p class="note">Cada año está alineado a su primer día de evento (día 0 = 15 nov 2024 y 14 nov 2025). Pasa el cursor sobre un punto para ver la fecha.</p>
+  </div>
+  <p>El 13 de noviembre de 2025 se concentró en temas de órdenes y operación previa: <b>47 tickets de «No permite dar salida a orden de buzón»</b>, 24 de Accesos, 20 de Error Mercado Pago, 17 de «No se reflejan citas» y 11 de «No permite dar entrada a orden». El 71% fueron incidentes y 76 vinieron de Bombavista (contra 15 el día previo al evento de 2024). El patrón apunta a una falla o un cambio puntual en el flujo de órdenes justo antes del evento; vale la pena confirmarlo con el equipo de Odoo.</p>
+</section>
+
+<section>
+  <h2>Durante el evento, la carga se carga a la apertura y se alarga en la noche</h2>
+  <div class="fig">
+    <div class="legend"><span><i class="k24"></i>Días normales</span><span><i class="k25"></i>Días de Buen Fin</span><span>Ambos años juntos · % de tickets del día por hora</span></div>
+    <div class="scroll"><svg viewBox="0 0 860 260" role="img" aria-label="Distribución por hora"><line class="grid" x1="44" x2="844" y1="220.0" y2="220.0"/><text class="tick" x="36" y="224.0" text-anchor="end">0%</text><line class="grid" x1="44" x2="844" y1="153.3" y2="153.3"/><text class="tick" x="36" y="157.3" text-anchor="end">10%</text><line class="grid" x1="44" x2="844" y1="86.7" y2="86.7"/><text class="tick" x="36" y="90.7" text-anchor="end">20%</text><line class="grid" x1="44" x2="844" y1="20.0" y2="20.0"/><text class="tick" x="36" y="24.0" text-anchor="end">30%</text><rect class="bn" x="50.4" y="218.9" width="19.2" height="1.1"><title>8:00 · días normales 0.2%</title></rect><rect class="bb" x="70.7" y="218.1" width="19.2" height="1.9"><title>8:00 · Buen Fin 0.3%</title></rect><text class="tick" x="70.7" y="238" text-anchor="middle">8h</text><rect class="bn" x="103.7" y="207.7" width="19.2" height="12.3"><title>9:00 · días normales 1.8%</title></rect><rect class="bb" x="124.0" y="214.3" width="19.2" height="5.7"><title>9:00 · Buen Fin 0.9%</title></rect><text class="tick" x="124.0" y="238" text-anchor="middle">9h</text><rect class="bn" x="157.1" y="172.6" width="19.2" height="47.4"><title>10:00 · días normales 7.1%</title></rect><rect class="bb" x="177.3" y="137.1" width="19.2" height="82.9"><title>10:00 · Buen Fin 12.4%</title></rect><text class="tick" x="177.3" y="238" text-anchor="middle">10h</text><rect class="bn" x="210.4" y="107.1" width="19.2" height="112.9"><title>11:00 · días normales 16.9%</title></rect><rect class="bb" x="230.7" y="38.1" width="19.2" height="181.9"><title>11:00 · Buen Fin 27.3%</title></rect><text class="tick" x="230.7" y="238" text-anchor="middle">11h</text><rect class="bn" x="263.7" y="130.5" width="19.2" height="89.5"><title>12:00 · días normales 13.4%</title></rect><rect class="bb" x="284.0" y="134.3" width="19.2" height="85.7"><title>12:00 · Buen Fin 12.9%</title></rect><text class="tick" x="284.0" y="238" text-anchor="middle">12h</text><rect class="bn" x="317.1" y="147.0" width="19.2" height="73.0"><title>13:00 · días normales 10.9%</title></rect><rect class="bb" x="337.3" y="181.0" width="19.2" height="39.0"><title>13:00 · Buen Fin 5.9%</title></rect><text class="tick" x="337.3" y="238" text-anchor="middle">13h</text><rect class="bn" x="370.4" y="163.5" width="19.2" height="56.5"><title>14:00 · días normales 8.5%</title></rect><rect class="bb" x="390.7" y="172.4" width="19.2" height="47.6"><title>14:00 · Buen Fin 7.1%</title></rect><text class="tick" x="390.7" y="238" text-anchor="middle">14h</text><rect class="bn" x="423.7" y="168.1" width="19.2" height="51.9"><title>15:00 · días normales 7.8%</title></rect><rect class="bb" x="444.0" y="186.7" width="19.2" height="33.3"><title>15:00 · Buen Fin 5.0%</title></rect><text class="tick" x="444.0" y="238" text-anchor="middle">15h</text><rect class="bn" x="477.1" y="169.7" width="19.2" height="50.3"><title>16:00 · días normales 7.6%</title></rect><rect class="bb" x="497.3" y="183.8" width="19.2" height="36.2"><title>16:00 · Buen Fin 5.4%</title></rect><text class="tick" x="497.3" y="238" text-anchor="middle">16h</text><rect class="bn" x="530.4" y="178.2" width="19.2" height="41.8"><title>17:00 · días normales 6.3%</title></rect><rect class="bb" x="550.7" y="197.1" width="19.2" height="22.9"><title>17:00 · Buen Fin 3.4%</title></rect><text class="tick" x="550.7" y="238" text-anchor="middle">17h</text><rect class="bn" x="583.7" y="164.3" width="19.2" height="55.7"><title>18:00 · días normales 8.3%</title></rect><rect class="bb" x="604.0" y="189.5" width="19.2" height="30.5"><title>18:00 · Buen Fin 4.6%</title></rect><text class="tick" x="604.0" y="238" text-anchor="middle">18h</text><rect class="bn" x="637.1" y="172.9" width="19.2" height="47.1"><title>19:00 · días normales 7.1%</title></rect><rect class="bb" x="657.3" y="190.5" width="19.2" height="29.5"><title>19:00 · Buen Fin 4.4%</title></rect><text class="tick" x="657.3" y="238" text-anchor="middle">19h</text><rect class="bn" x="690.4" y="196.3" width="19.2" height="23.7"><title>20:00 · días normales 3.6%</title></rect><rect class="bb" x="710.7" y="175.2" width="19.2" height="44.8"><title>20:00 · Buen Fin 6.7%</title></rect><text class="tick" x="710.7" y="238" text-anchor="middle">20h</text><rect class="bn" x="743.7" y="216.8" width="19.2" height="3.2"><title>21:00 · días normales 0.5%</title></rect><rect class="bb" x="764.0" y="201.9" width="19.2" height="18.1"><title>21:00 · Buen Fin 2.7%</title></rect><text class="tick" x="764.0" y="238" text-anchor="middle">21h</text><rect class="bn" x="797.1" y="220.0" width="19.2" height="0.0"><title>22:00 · días normales 0.0%</title></rect><rect class="bb" x="817.3" y="214.3" width="19.2" height="5.7"><title>22:00 · Buen Fin 0.9%</title></rect><text class="tick" x="817.3" y="238" text-anchor="middle">22h</text></svg></div>
+  </div>
+  <p>En días de Buen Fin, el <b>58% de los tickets entra entre 10:00 y 13:59</b> (contra 48% en días normales), con un pico muy marcado a las 11:00. También crece la cola nocturna: de 20:00 en adelante entra el 13% de los tickets del evento en 2024 y el 8% en 2025, contra 3–5% en días normales. Esas horas coinciden con aperturas y cierres de caja.</p>
+</section>
+
+<section>
+  <h2>Qué temas se disparan en el evento</h2>
+  <p>Tickets promedio por día durante el Buen Fin contra el resto del mes. El multiplicador indica cuántas veces más se presenta el tema en el evento.</p>
+  <div class="fig">
+    <div class="scroll"><table>
+      <thead><tr><th>Tema</th><th class="num yr">2024 evento</th><th class="num">2024 resto</th><th>×</th><th class="num yr">2025 evento</th><th class="num">2025 resto</th><th>×</th><th>2025 por día</th></tr></thead>
+      <tbody><tr><th scope="row">Caja (apertura/cierre/asignación)</th><td class="num">26.8</td><td class="num">8.9</td><td><span class="pill hot">3.0×</span></td><td class="num">26.8</td><td class="num">9.9</td><td><span class="pill hot">2.7×</span></td><td class="barcell"><span class="mb b25" style="width:100%"></span><span class="mb bn" style="width:37%"></span></td></tr><tr><th scope="row">Accesos y permisos</th><td class="num">21.0</td><td class="num">15.6</td><td><span class="pill warm">1.3×</span></td><td class="num">24.5</td><td class="num">12.3</td><td><span class="pill hot">2.0×</span></td><td class="barcell"><span class="mb b25" style="width:91%"></span><span class="mb bn" style="width:46%"></span></td></tr><tr><th scope="row">Agenda y consultorios</th><td class="num">5.8</td><td class="num">4.0</td><td><span class="pill warm">1.4×</span></td><td class="num">12.8</td><td class="num">5.1</td><td><span class="pill hot">2.5×</span></td><td class="barcell"><span class="mb b25" style="width:48%"></span><span class="mb bn" style="width:19%"></span></td></tr><tr><th scope="row">Venta y catálogo</th><td class="num">7.2</td><td class="num">4.4</td><td><span class="pill warm">1.7×</span></td><td class="num">9.2</td><td class="num">3.2</td><td><span class="pill hot">2.9×</span></td><td class="barcell"><span class="mb b25" style="width:34%"></span><span class="mb bn" style="width:12%"></span></td></tr><tr><th scope="row">Órdenes, buzón e inventario</th><td class="num">2.8</td><td class="num">7.0</td><td><span class="pill cool">0.4×</span></td><td class="num">8.5</td><td class="num">11.2</td><td><span class="pill cool">0.8×</span></td><td class="barcell"><span class="mb b25" style="width:32%"></span><span class="mb bn" style="width:42%"></span></td></tr><tr><th scope="row">Pagos (Mercado Pago/QR)</th><td class="num">4.2</td><td class="num">4.5</td><td><span class="pill cool">1.0×</span></td><td class="num">6.0</td><td class="num">3.7</td><td><span class="pill warm">1.6×</span></td><td class="barcell"><span class="mb b25" style="width:22%"></span><span class="mb bn" style="width:14%"></span></td></tr><tr><th scope="row">Otros</th><td class="num">10.5</td><td class="num">4.6</td><td><span class="pill hot">2.3×</span></td><td class="num">5.2</td><td class="num">4.4</td><td><span class="pill cool">1.2×</span></td><td class="barcell"><span class="mb b25" style="width:19%"></span><span class="mb bn" style="width:16%"></span></td></tr><tr><th scope="row">Red / conectividad</th><td class="num">3.2</td><td class="num">3.6</td><td><span class="pill cool">0.9×</span></td><td class="num">0.5</td><td class="num">2.0</td><td><span class="pill cool">0.2×</span></td><td class="barcell"><span class="mb b25" style="width:2%"></span><span class="mb bn" style="width:7%"></span></td></tr></tbody>
+    </table></div>
+    <p class="note">Temas agrupados a partir de la subcategoría. «Otros» incluye la subcategoría genérica «Odoo», Google Suite, Gmail y equipos. Evento = 4 días; resto = demás días del mes en la base.</p>
+  </div>
+  <p>Las subcategorías con más multiplicador en 2025 fueron <b>Error Cierre de Caja (13.6×)</b>, <b>Olvidé cerrar caja (12×)</b>, No sale producto para venta (4.1×), Odoo (3.7×), No se ven espacios disponibles (3.5×) y Accesos (2.6×). El cierre de caja crece conforme avanza el evento: en 2025 pasó de 3 tickets el día 1 a 17 el día 4. En 2024 el problema fuerte fue la apertura (16 y 18 tickets los días 2 y 3).</p>
+</section>
+
+<section>
+  <h2>Cambios de 2024 a 2025 en todo el mes</h2>
+  <div class="legend"><span><i class="k24"></i>2024</span><span><i class="k25"></i>2025</span></div>
+  <div class="cols">
+    <div class="fig"><h3>Lo que creció</h3><ul class="yoy"><li><span class="sc">Asignar caja</span><span class="pair"><span class="mb s24b" style="width:53%"></span><span class="mb b25" style="width:100%"></span></span><span class="num">115 → 219</span></li><li><span class="sc">No permite dar salida a orden de buzón</span><span class="pair"><span class="mb s24b" style="width:22%"></span><span class="mb b25" style="width:50%"></span></span><span class="num">48 → 110</span></li><li><span class="sc">No permite cerrar consultorios</span><span class="pair"><span class="mb s24b" style="width:9%"></span><span class="mb b25" style="width:28%"></span></span><span class="num">20 → 61</span></li><li><span class="sc">No se reflejan citas</span><span class="pair"><span class="mb s24b" style="width:8%"></span><span class="mb b25" style="width:19%"></span></span><span class="num">17 → 42</span></li><li><span class="sc">RMA</span><span class="pair"><span class="mb s24b" style="width:0%"></span><span class="mb b25" style="width:11%"></span></span><span class="num">0 → 25</span></li><li><span class="sc">Error Mercado Pago</span><span class="pair"><span class="mb s24b" style="width:25%"></span><span class="mb b25" style="width:35%"></span></span><span class="num">54 → 76</span></li><li><span class="sc">No pernite validar transferencia In</span><span class="pair"><span class="mb s24b" style="width:4%"></span><span class="mb b25" style="width:12%"></span></span><span class="num">9 → 27</span></li><li><span class="sc">Acceso a lectura</span><span class="pair"><span class="mb s24b" style="width:4%"></span><span class="mb b25" style="width:11%"></span></span><span class="num">8 → 24</span></li><li><span class="sc">No permite dar entrada a orden</span><span class="pair"><span class="mb s24b" style="width:11%"></span><span class="mb b25" style="width:19%"></span></span><span class="num">25 → 41</span></li></ul></div>
+    <div class="fig"><h3>Lo que bajó</h3><ul class="yoy"><li><span class="sc">Error Apertura de Caja</span><span class="pair"><span class="mb s24b" style="width:42%"></span><span class="mb b25" style="width:13%"></span></span><span class="num">91 → 28</span></li><li><span class="sc">Sin Red en templo</span><span class="pair"><span class="mb s24b" style="width:26%"></span><span class="mb b25" style="width:14%"></span></span><span class="num">57 → 30</span></li><li><span class="sc">Permisos de Gerente</span><span class="pair"><span class="mb s24b" style="width:18%"></span><span class="mb b25" style="width:7%"></span></span><span class="num">40 → 16</span></li><li><span class="sc">Genera error al realizar venta</span><span class="pair"><span class="mb s24b" style="width:30%"></span><span class="mb b25" style="width:19%"></span></span><span class="num">65 → 42</span></li><li><span class="sc">Odoo</span><span class="pair"><span class="mb s24b" style="width:26%"></span><span class="mb b25" style="width:16%"></span></span><span class="num">56 → 34</span></li><li><span class="sc">Olvide Cerrar Caja</span><span class="pair"><span class="mb s24b" style="width:20%"></span><span class="mb b25" style="width:10%"></span></span><span class="num">43 → 21</span></li><li><span class="sc">Cuenta</span><span class="pair"><span class="mb s24b" style="width:14%"></span><span class="mb b25" style="width:5%"></span></span><span class="num">30 → 11</span></li></ul></div>
+  </div>
+  <p>El crecimiento de «Asignar caja» es casi todo de Lentes Galileo Chile (172 de 219 en 2025); en México bajó de 96 a 47. Chile pasó de 109 a 280 tickets y la mayoría son requerimientos de caja, así que conviene analizarlo aparte porque el Buen Fin no es un evento de ese país. Sin Chile, México bajó 10% en el mes (1,478 → 1,336) pero subió 7% durante el evento (311 → 333): el evento pesa cada vez más sobre la operación normal.</p>
+</section>
+
+<section>
+  <h2>Hallazgos clave</h2>
+  <div class="findings">
+    <div class="f"><div class="tag"><span class="pill hot sev">Alto</span>Órdenes y buzón</div><div class="body"><h3>El flujo de órdenes es el nuevo punto débil</h3><p>«Salida de orden de buzón» pasó de 48 a 110 tickets, «Entrada de orden» de 25 a 41, «Validar transferencia» de 9 a 27 y apareció RMA con 25. En Bombavista el tema saltó de 19 a 114. Fue el origen del pico del 13 de noviembre.</p></div></div>
+    <div class="f"><div class="tag"><span class="pill hot sev">Alto</span>Accesos y permisos</div><div class="body"><h3>Accesos es el ticket #1 en ambos años y se duplica en el evento</h3><p>284 y 271 tickets en el mes. En el Buen Fin 2025 llegó a 40 tickets en un solo día (sábado 15). Se asocia a personal de refuerzo, cambios de compañía y permisos de gerente que se piden sobre la marcha.</p></div></div>
+    <div class="f"><div class="tag"><span class="pill hot sev">Alto</span>Caja</div><div class="body"><h3>El ciclo de caja es el tema que más volumen genera en el evento</h3><p>27 tickets por día en ambos años, 3 veces lo normal. La apertura mejoró mucho (Error Apertura de Caja 91 → 28), pero el cierre sigue igual (63 → 62) y se concentra al final del evento y en la noche.</p></div></div>
+    <div class="f"><div class="tag"><span class="pill warm sev">Medio</span>Agenda</div><div class="body"><h3>Agenda y consultorios crecen</h3><p>«No permite cerrar consultorios» 20 → 61, «No se reflejan citas» 17 → 42. En el evento 2025 hubo 12.8 tickets de agenda por día, 2.5 veces lo normal; «Se empalman citas» casi no aparece fuera del evento.</p></div></div>
+    <div class="f"><div class="tag"><span class="pill warm sev">Medio</span>Pagos</div><div class="body"><h3>Mercado Pago sigue fallando en el evento</h3><p>Error Mercado Pago subió de 54 a 76 en el mes y se duplica en días de evento. Las altas de Mercado Pago bajaron (42 → 25), así que el problema ya no es de configuración inicial sino de operación.</p></div></div>
+    <div class="f"><div class="tag"><span class="pill cool sev">Mejoró</span>Red</div><div class="body"><h3>La red dejó de ser problema</h3><p>Red y conectividad bajó de 100 a 51 tickets en el mes y de 13 a 2 durante el evento. Lo que se hizo aquí vale la pena repetirlo.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Recomendaciones para la próxima edición</h2>
+  <div class="plan">
+    <div class="step"><span class="when">2 semanas antes</span><h3>Preparar accesos y cajas</h3><ul>
+      <li>Dar de alta accesos, permisos de gerente y cambios de compañía del personal de refuerzo con una lista por tienda, a más tardar 5 días antes.</li>
+      <li>Asignar cajas por adelantado y validar que cada usuario pueda abrir caja en su tienda.</li>
+      <li>Revisar perfiles y terminales de Mercado Pago en todas las tiendas.</li>
+    </ul></div>
+    <div class="step"><span class="when">Semana previa</span><h3>Congelar cambios y probar los flujos críticos</h3><ul>
+      <li>No liberar cambios en Odoo desde 3 días antes del evento hasta que termine.</li>
+      <li>Probar de punta a punta entrada y salida de órdenes de buzón, transferencias, citas y consultorios, sobre todo en Bombavista.</li>
+      <li>Tener guardia reforzada el día anterior al evento, no solo durante: en 2025 fue el día más pesado.</li>
+    </ul></div>
+    <div class="step"><span class="when">Durante el evento</span><h3>Cubrir los picos de hora</h3><ul>
+      <li>Concentrar agentes de 10:00 a 14:00, donde entra casi 60% de los tickets.</li>
+      <li>Extender la guardia hasta las 22:00–23:00 para cierres de caja, en especial los días 3 y 4.</li>
+      <li>Tener respuestas listas para Accesos, Asignar caja, Cierre de caja y Error Mercado Pago, que son más de un tercio del volumen.</li>
+      <li>Enviar recordatorio de cierre de caja a las tiendas antes del cierre.</li>
+    </ul></div>
+    <div class="step"><span class="when">Planeación de capacidad</span><h3>Cuánto esperar</h3><ul>
+      <li>Días del evento: entre 60 y 130 tickets diarios.</li>
+      <li>Día previo: prepararse para un escenario de hasta ~185 tickets si se repite una falla como la de 2025.</li>
+      <li>Semana posterior: se mantiene entre 35 y 65 por día con cierres de caja y ajustes.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Calidad de los datos</h2>
+  <p>Para medir mejor el próximo evento conviene corregir esto en la captura de tickets:</p>
+  <ul class="dq">
+    <li><b>Tienda sin identificar:</b> el 64% de los tickets de 2024 y el 53% de 2025 tienen tienda «Otro». No se puede saber qué tiendas fallan más.</li>
+    <li><b>Tipo de ticket sin estandarizar:</b> aparecen «Incidente» e «incidente», «Requerimiento» y «requerimiento».</li>
+    <li><b>Usuario faltante:</b> 150 tickets de 2025 no tienen usuario, y en 2024 la columna no existe.</li>
+    <li><b>Subcategorías genéricas:</b> «Odoo» como subcategoría (90 tickets) no dice cuál fue el problema.</li>
+    <li><b>Chile mezclado:</b> Lentes Galileo Chile entra en la misma base y en 2025 representa 17% del volumen; conviene separarlo para los análisis de Buen Fin.</li>
+  </ul>
+</section>
+</div>
+</body>
+</html>
